@@ -1,0 +1,231 @@
+/* Reset tampilan default untuk elemen */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16pt;
+
+}
+
+/* style dari navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 50px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    place-items: center;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+  position: relative;
+  right: 550%;
+  margin-top: 30%;
+}
+
+.nav-item {
+    margin: 0 20px;
+    position: relative; 
+    left: 170%;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+/* Gaya dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f7f7f7; 
+    list-style: none;
+    padding: 10px;
+    width: auto ; 
+}
+
+.nav-item:hover .dropdown {
+    display: block; /* Dropdown menu akan terlihat saat mengarahkan kursor ke menu utama */
+    width: auto; 
+}
+
+.dropdown li {
+    padding: 10px;
+    white-space: nowrap; 
+}
+
+.dropdown a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-item:hover a {
+    background-color: wheat; /* Warna latar belakang saat hover */
+}
+
+.h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 80px;
+  margin-right: 50%;
+  margin-left: 5%;
+  margin-top: 20%;
+  line-height: 80px;
+}
+
+/* Animasi svg*/
+#TelescopeGirl{
+  position: absolute;
+  right: 5%;
+  top: 15%;
+}
+@keyframes MelayangY {
+    0%{
+      transform: translateY(-10px);     
+    }
+    100%{
+      transform: translateY(10px);
+    }}
+@keyframes Rambut {
+    0% {
+      transform: rotateZ(5deg);
+    }
+    100% {
+      transform: rotateZ(-10deg);
+    }}
+  @keyframes IkatRambut {
+    0% {
+      transform: rotateZ(-10deg);
+    }
+    100% {
+      transform: rotateZ(15deg);
+    }}
+#rambut {
+    animation: Rambut 2s linear infinite alternate;
+    transform-origin: top;
+    transform-box: fill-box;
+  }
+  #notes {
+    animation: MelayangY 2s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  #calculator {
+    animation: MelayangY 3s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box; ;
+  }
+  #ikat-rambut {
+    animation: IkatRambut .5s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+.page2 {
+  position: relative;
+  top: 350px;
+  background: #5AA96B;
+  height: 350px;
+}
+#Dave {
+  position: relative;
+  left: -130px;
+}
+.h2 {
+  position: relative;
+  width: 60%;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  color: #FFFFFF;
+  font-size:45px;
+  margin-left: 40%;
+  line-height: 50px;
+  top: -330px;
+  left: -100px;
+}
+
+#CompasBoy{
+  position: relative;
+  margin-left: 5%;
+  margin-right: 10%;
+  top: 600px;
+  background: #FFFFFF;
+  width: 40%;
+  height: 300px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 8px #C0C0C0 , -10px -10px 8px #f7f7f7;
+}
+
+#ChartGirl{
+  position: relative;
+  margin-right: 5%;
+  left: 50%;
+  top: 350px;
+  background: #FFFFFF;
+  width: 40%;
+  height: 300px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 8px #C0C0C0 , -10px -10px 8px #f7f7f7;
+}
+
+#PohonKecil{
+  position: relative;
+  margin-left: 5%;
+  top: 400px;
+  background: #FFFFFF;
+  width: 40%;
+  height: 300px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 8px #C0C0C0 , -10px -10px 8px #f7f7f7;
+}
+#PohonHasil{
+  position: relative;
+  margin-right: 5%;
+  left: 50%;
+  top: 130px;
+  background: #FFFFFF;
+  width: 40%;
+  height: 300px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 8px #C0C0C0 , -10px -10px 8px #f7f7f7;
+}
+.p1 {
+  position: relative;
+  width: 40%;
+  margin-left: 55%;
+  top: -220px;
+}
+.p2 {
+  position: relative;
+  width: 40%;
+  margin-left: 55%;
+  top: -150px;
+}
+.p3 {
+  position: relative;
+  width: 40%;
+  margin-left: 55%;
+  top: -250px;
+}
+.p4 {
+  position: relative;
+  width: 40%;
+  margin-left: 55%;
+  top: -250px;
+}
+.p1 , .p2 , .p3 , .p4 {
+  font-size: 20pt;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}

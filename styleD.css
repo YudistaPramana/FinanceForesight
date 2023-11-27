@@ -1,0 +1,239 @@
+body{
+    background-color: #F7F7F7;
+    margin-top:  2%;
+    margin-right: 7%;
+    padding: 0;
+
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 50px;
+  }
+  
+  .nav-menu {
+      list-style: none;
+      display: flex;
+      place-items: center;
+  }
+  
+  .logo img {
+    width: 200px;
+    height: auto;
+    position: relative;
+    right: 550%;
+    margin-top: 30%;
+  }
+  
+  .nav-item {
+      margin: 0 20px;
+      position: relative; 
+      left: 170%;
+  }
+  
+  .nav-item a {
+      text-decoration: none;
+      color: black;
+      padding: 10px;
+  }
+  
+  /* Gaya dropdown */
+  .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #FFFFFF; 
+      list-style: none;
+      padding: 10px;
+      width: auto ; 
+  }
+  
+  .nav-item:hover .dropdown {
+      display: block; /* Dropdown menu akan terlihat saat mengarahkan kursor ke menu utama */
+      width: auto; 
+  }
+  
+  .dropdown li {
+      padding: 10px;
+      white-space: nowrap; 
+  }
+  
+  .dropdown a {
+      color: black;
+      text-decoration: none;
+  }
+  
+  .nav-item:hover a {
+      background-color: wheat; /* Warna latar belakang saat hover */
+  }
+    .h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        margin-left: 50%;
+        line-height: 65px;
+    }
+    .p1 {
+        width: 50%;
+        text-align: justify;
+        text-indent: 45px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        margin-left: 50%;
+        line-height: 25px;
+    }
+    .submitKButton {
+        position: relative;
+        background: #5aa96b;
+        color: #FFFFFF;
+        border: none;
+        padding: 15px 50px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        text-align: center;
+        left: 200px;
+    }
+    .submitLButton {
+        position: relative;
+        background: #5aa96b;
+        color: #FFFFFF;
+        border: none;
+        padding: 15px 50px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 2%;
+        left: 650px;
+      }
+    .submitButton {
+        position: relative;
+        background: #5aa96b;
+        color: #FFFFFF;
+        border: none;
+        padding: 15px 50px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        text-align: center;
+        left: 200px;
+    }
+
+    .page2{
+        position: relative;
+        margin-left: 20%;
+        margin-top: 100px;
+        margin-bottom: 300px;
+    }
+    .page2 {
+        margin-left: 100px;
+        width: 90%;
+        height: 420px;
+        background: #f7f7f7;
+        border-radius: 25px;
+        box-shadow: 10px 10px 8px #C0C0C0 , -10px -10px 8px #FFFFFF;
+    }
+    #Labels {
+        position: relative;
+        top: 30px;
+        margin-left: 10%;
+        width: 80%;
+        left: 0%;
+        font-size: 12pt;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    #KTextBox , #PBTextBox , #DYTextBox , #PTextBox {
+        font-size: 12pt;
+        width: 250px; 
+        height: 20px;
+    }
+    #ResultSection {
+        width: 45%;
+        position: absolute;
+        margin-top: 18.2%;
+        left: 55%;
+        top: -53.5%;
+        background-color: #5AA96B;
+        border-radius: 100px 25px 25px 100px;
+        height: 100%;
+    }
+    
+    .hr1 {
+        width: 0%;
+        position: absolute;
+        color: #FFFFFF;
+        font-size: 50px;
+        margin-left: 10%;
+    }
+    
+    .L{
+        width: 80%;
+        position: inherit;
+        color: #FFFFFF;
+        font-size: 20px;
+        margin-top: 45%;
+        margin-left: 10%;
+    }
+#PohonHasil {
+    position: absolute;
+    
+}
+@keyframes KoinJatuh {
+        
+    0% {
+    transform: translateY(0);
+    opacity: 100%;
+    }
+    100% {
+    transform: translateY(200px);
+    opacity: 0%;
+    }}
+
+@keyframes KoinJatuhMerah {
+    
+    0% {
+      transform: translateY(0);
+      opacity: 100%;
+    }
+    100% {
+      transform: translateY(400px);
+      opacity: 0%;
+}}
+@keyframes Pohon {
+  0% {
+    transform: rotateZ(5deg);
+  }
+  100% {
+    transform: rotateZ(-5deg);
+  }}
+#koin-hijau-kiri , #koin-hijau-kanan {
+    animation-delay: KoinJatuh 1s;
+    animation: KoinJatuh 2s ease-in-out infinite;
+}
+#koin-hijau-kecil {
+    animation: KoinJatuh 4s ease-in-out infinite;
+}
+#koin-merah {
+    animation-delay: KoinJatuhMerah 1s;
+    animation: KoinJatuhMerah 3s ease-in-out infinite;
+    position: relative;
+}
+#pohon {
+  animation: Pohon 2s linear infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+#tanah {
+    position: relative;
+}

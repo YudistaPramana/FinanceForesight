@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF | Future Value Annuity</title>
+    <link rel="stylesheet" type="text/css" href="styleFVA.css">
+</head>
+<body >
+    <script src="scriptFVA.js"></script>
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item" style="color: black;">Services</a>
+            <ul class="dropdown">
+                <li><a href ="FVA.html">Future Value Annuity</a></li>
+                <li><a href ="Dividend.html">Income dari Dividend</a></li>
+            </ul>
+            </li>
+            <li class="nav-item"><a href="AboutUs.html">About</a></li>
+            <li class="nav-item"><a href="mailto:yudistapramana15@gmail.com?subject=Feedback20%FinanceForesight">Feedback</a></li>
+        </ul>
+        <div class="logo">
+            <img src="FinanceForesightPics/logo-financeforesight.svg" alt="Logo">
+        </div>
+    </nav>
+<section class="page1">
+    
+    <div id="InputSection" class="box">
+
+    <label id="OLabel">Apa tujuan investasimu Sobat?</label><br>
+    <input type="text" id="OTextBox" placeholder="cth: beli mobil, dana pendidikan anak"><br><br>
+
+    <label id="GLabel">Berapa dana yang diperlukan Sob?
+        <br> <input type="text" id="GTextBox" oninput="formatCurrency(this)" maxlength="15" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/><br><br>
+    </label>
+   
+    <label id="rLabel">Masukkan persentase aset investasimu</label><br>
+    <input type="number" id="rTextBox" placeholder="..%"><br><br>
+
+    <label id="nLabel">Pilih frekuensi investasimu dalam setahun Sob!
+        <br> 
+        <select id="nTextBox">
+            <option value="12">Setiap Bulan</option>
+            <option value="6">Setiap 2 bulan</option>
+            <option value="4">Setiap 3 bulan</option>
+            <option value="3">Setiap 4 bulan</option>
+            <option value="2">Setiap 6 bulan</option>
+            <option value="1">Setiap Tahun</option>
+        </select>
+    </label><br><br>
+
+    <label id="PLabel">Berapa nominal tiap kali investasi?
+        <br> <input type="text" id="PTextBox" oninput="formatCurrency(this)" maxlength="15" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/><br><br>
+    </label>
+    
+    <label id="tLabel">Berapa tahun durasi investasimu?
+        <br> <input type="number" id="tTextBox" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br><br>
+    </label>
+
+    <script>
+        function formatCurrency(input) {
+        let value = input.value.replace(/[\.,]/g, ''); //Hapus tanda titik dan koma
+        input.value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');  //Format angka dengan tanda titik
+        } 
+    </script>
+   
+        <button type="button" id="submitButton" class="submitButton"><a href="#ResultSection" style="color: #FFFFFF; text-decoration: none;">Hitung</a></button><!--<br><br><br><br><br><br><br><br><br><br><br>-->
+</div>
+
+<div id="ResultSection">
+    <br>
+    <h3 id="FR"></h3>
+    <p id="FVA"></p>
+    <input type="text" id="FVALabel" style="display: none;">
+    <p id="FVA2"></p>
+    <input type="text" id="FVA2Label" style="display: none;">
+    <p id="Saran"></p>
+    <input type="text" id="Saran" style="display: none;">
+    <p id="PSaran"></p>
+    <input type="text" id="PSaran" style="display: none;">
+    <p id="nSaran"></p>
+    <input type="text" id="nSaran" style="display: none;">
+    <p id="tSaran"></p>
+    <input type="text" id="tSaran" style="display: none;">
+</div>
+</section>
+</body>
+</html>

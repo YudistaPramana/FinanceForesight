@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF | Income dari Dividen</title>
+    <link rel="stylesheet" href="styleD.css">
+</head>
+<body>
+    <script src="Dividend.js"></script>
+
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item" style="color: black;">Services</a>
+            <ul class="dropdown">
+                <li><a href ="FVA.html">Future Value Annuity</a></li>
+                <li><a href ="Dividend.html">Income dari Dividend</a></li>
+            </ul>
+            </li>
+            <li class="nav-item"><a href="AboutUs.html">About</a></li>
+            <li class="nav-item"><a href="mailto:yudistapramana15@gmail.com?subject=Feedback20%FinanceForesight">Feedback</a></li>
+        </ul>
+        <div class="logo">
+            <img src="FinanceForesightPics/logo-financeforesight.svg" alt="Logo">
+        </div>
+    </nav>
+    
+    <div id="page2" class="page2">
+        <div id="Labels" class="Labels">
+        <label id="PBLabel">Masukan nominal pengeluaran pokok dalam 1 bulanmu Sob!
+            <br><input type="text" id="PBTextBox" oninput="formatCurrency(this)" maxlength="15" onkeypress="return event.charCode >= 48 && event.charCode <= 57"></label><br><br>
+    
+            <script>
+                function formatCurrency(input) {
+                let value = input.value.replace(/[\.,]/g, ''); //Hapus tanda titik dan koma
+                input.value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');  //Format angka dengan tanda titik
+                } 
+            </script>
+    
+        <label id="KLabel">Kamu ingin mendapat dividend dari saham
+            <br><input type="text" id="KTextBox" placeholder="cth: BBRI"></label><br><br>
+    
+        <button type="button" id="submitKButton" class="submitKButton">Input</button><br><br>
+        
+        <div id="LabelInput" style="display: none;">
+            <label id="DYLabel"></label><br><br>
+    
+            <label id="PLabel"></label><br><br>
+    
+            <button type="button" id="submitButton" class="submitButton" style="display: none;">Hitung</button>
+        </div></div>
+        <div id="ResultSection" class="ResultSection">
+            <h1 class="hr1">Hasil simulasimu Sob!</h1>
+            <p id="L" class="L"></p>
+        </div>
+        <input type="text" id="LLabel" style="display: none;">
+    </div>
+</body>
+</html>
