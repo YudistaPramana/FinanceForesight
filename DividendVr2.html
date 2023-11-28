@@ -27,7 +27,7 @@
     </nav>
     
     <div id="page2" class="page2">
-        <div id="Labels" class="Labels">
+        <div id="InputSection" class="InputSection">
         <label id="PBLabel">Masukan nominal pengeluaran pokok dalam 1 bulanmu Sob!
             <br><input type="text" id="PBTextBox" oninput="formatCurrency(this)" maxlength="15" onkeypress="return event.charCode >= 48 && event.charCode <= 57"></label><br><br>
     
@@ -43,18 +43,17 @@
     
         <button type="button" id="submitKButton" class="submitKButton">Input</button><br><br>
         
-        <div id="LabelInput" style="display: none;">
-            <label id="DYLabel"></label><br><br>
+        <label id="DYLabel"></label><br><br>
     
-            <label id="PLabel"></label><br><br>
+        <label id="PLabel"></label><br><br>
     
-            <button type="button" id="submitButton" class="submitButton" style="display: none;">Hitung</button>
-        </div></div>
+        <button type="button" id="submitButton" class="submitButton" style="display: none;">Hitung</button>
+        </div>
         <div id="ResultSection" class="ResultSection">
             <h1 class="hr1">Hasil simulasimu Sob!</h1>
             <p id="L" class="L"></p>
+            <input type="text" id="LLabel" style="display: none;">
         </div>
-        <input type="text" id="LLabel" style="display: none;">
     </div>
 </body>
 </html>
