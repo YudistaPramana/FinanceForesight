@@ -169,20 +169,21 @@ body{
       }
     
     .hr1 {
-        width: 0%;
-        position: absolute;
+        position: relative;
+        width: 40%;
         color: #FFFFFF;
         font-size: 50px;
-        margin-left: 10%;
+        top: 5%;
+        left: 10%;
     }
     
     .L{
         width: 80%;
-        position: inherit;
+        position: relative;
         color: #FFFFFF;
         font-size: 20px;
-        margin-top: 45%;
-        margin-left: 10%;
+        top: 3%;
+        left: 10%;
     }
 #PohonHasil {
     position: absolute;
