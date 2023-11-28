@@ -144,30 +144,29 @@ body{
         border-radius: 25px;
         box-shadow: 10px 10px 8px #C0C0C0 , -10px -10px 8px #FFFFFF;
     }
-    #Labels {
-        position: relative;
-        top: 30px;
-        margin-left: 10%;
-        width: 80%;
-        left: 0%;
-        font-size: 12pt;
-        font-family: Arial, Helvetica, sans-serif;
-      }
+
     #KTextBox , #PBTextBox , #DYTextBox , #PTextBox {
         font-size: 12pt;
         width: 250px; 
         height: 20px;
     }
-    #ResultSection {
-        width: 45%;
+    #InputSection {
         position: absolute;
-        margin-top: 18.2%;
-        left: 55%;
-        top: -53.5%;
+        width: 80%;
+        margin-top: 3%;
+        margin-left: 10%;
+        font-size: 12pt;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    #ResultSection {
+        width: 50%;
+        position: relative;
+        margin-left: 50%;
         background-color: #5AA96B;
+        color: #FFFFFF;
         border-radius: 100px 25px 25px 100px;
         height: 100%;
-    }
+      }
     
     .hr1 {
         width: 0%;
