@@ -58,9 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }     
     }
 
-    if (!K || !PB) {
-            alert("Silahkan isi semua tabel dulu Sobat!")
-        } else {
     document.getElementById("submitButton").onclick = function () {
 
         var K = document.getElementById("KTextBox").value;
@@ -80,7 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // Ganti semua tanda titik dengan string kosong agar tidak mempengaruhi format angka
             return parseFloat(cleanedValue.replace(/\./g, ""));
         }
-
+        if (!DY || !P) {
+            alert("Silahkan isi semua tabel dulu Sobat!")
+        } else {
         PB = PB*12;
         P = P * 100;
         DY = DY/100;
