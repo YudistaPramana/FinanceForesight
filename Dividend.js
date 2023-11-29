@@ -91,10 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("L").innerHTML = "Sobat, kamu perlu membeli saham " + K + " sebanyak " + L + 
         " lot dengan total nilai investasi sebesar "  + formatCurrencyIDR(P) + 
         " sehingga dividennya dapat memenuhi dana kebutuhanmu dalam 1 tahun!"
-    }
 
     function formatCurrencyIDR(amount) {
         return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(amount);
-    }
-    }
+    }}}
 });
