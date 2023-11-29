@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let PB = document.getElementById("PBTextBox").value;
 
         if (!K || !PB) {
-            alert("Silahkan isi semua tabel dulu Kawan!")
+            alert("Silahkan isi semua tabel dulu Sobat!")
         } else {
         // Tampilkan div "LabelInput"
         var labelInputDiv = document.getElementById("LabelInput");
@@ -58,6 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }     
     }
 
+    if (!K || !PB) {
+            alert("Silahkan isi semua tabel dulu Sobat!")
+        } else {
     document.getElementById("submitButton").onclick = function () {
 
         var K = document.getElementById("KTextBox").value;
@@ -93,5 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function formatCurrencyIDR(amount) {
         return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(amount);
+    }
     }
 });
