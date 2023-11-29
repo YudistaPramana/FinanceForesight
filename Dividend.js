@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         PLabel.appendChild(document.createElement("br")); // Tambahkan elemen <br> (baris baru) sebelum input
         var PTextBox = document.createElement("input"); // Buat elemen <input>
         PTextBox.id = "PTextBox";
-        PTextBox.type = "number";
+        PTextBox.type = "text";
         PTextBox.setAttribute("oninput", "formatCurrency(this)");
         PTextBox.setAttribute("onkeypress","return event.charCode >= 48 && event.charCode <= 57")
         PLabel.appendChild(PTextBox); // Tambahkan elemen input ke dalam "PLabel"
