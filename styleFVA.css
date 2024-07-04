@@ -1,227 +1,460 @@
 body{
   background-color: #F7F7F7;
-  font-family: Arial, Helvetica, sans-serif;
     padding: 0;
-    margin-top: 2%;
-    margin-right: 7%;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #FFFFFF;
-  padding: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  height: 50px;
+    margin: 0;
 }
 
-.nav-menu {
-    list-style: none;
+@media (min-width: 451px) {
+  .navbar {
     display: flex;
-    place-items: center;
-}
-
-.logo img {
-  width: 200px;
-  height: auto;
-  position: relative;
-  right: 550%;
-  margin-top: 30%;
-}
-
-.nav-item {
-    margin: 0 20px;
-    position: relative; 
-    left: 170%;
-}
-
-.nav-item a {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 50px;
+  }
+  
+  .nav-menu {
+      list-style: none;
+      display: flex;
+      place-items: center;
+      font-size: 14pt;
+  }
+  
+  .logo img {
+    width: 200px;
+    height: auto;
+    position: relative;
+    right: 550%;
+    margin-top: 30%;
+  }
+  
+  .nav-item {
+      margin: 0 20px;
+      position: relative; 
+      left: 170%;
+  }
+  
+  .nav-item a {
+      text-decoration: none;
+      color: black;
+      padding: 10px;
+  }
+  
+  /* Gaya dropdown */
+  .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #FFFFFF; 
+      list-style: none;
+      padding: 10px;
+      width: auto ; 
+  }
+  
+  .nav-item:hover .dropdown {
+      display: block; /* Dropdown menu akan terlihat saat mengarahkan kursor ke menu utama */
+      width: auto; 
+  }
+  
+  .dropdown li {
+      padding: 10px;
+      white-space: nowrap; 
+  }
+  
+  .dropdown a {
+      color: black;
+      text-decoration: none;
+  }
+  
+  .nav-item:hover a {
+      background-color: wheat; /* Warna latar belakang saat hover */
+  }
+  
+  .submitButton {
+    position: relative;
+    background: #5aa96b;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 50px;
     text-decoration: none;
-    color: black;
-    padding: 10px;
-}
-
-/* Gaya dropdown */
-.dropdown {
-    display: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 2%;
+    left: 200px;
+  }
+  
+      #nTextBox {
+          font-size: 12pt;
+          width: 250px; 
+          height: 30px; 
+      }
+  
+      #GTextBox , #PTextBox , #rTextBox , #tTextBox , #UTextBox , #OTextBox{
+          font-size: 12pt;
+          width: 300px; 
+          height: 20px;
+      }
+  
+  .page1 {
+    margin-top: 5%;
+    margin-left: 100px;
+    width: 90%;
+    height: 500px;
+    background: #f7f7f7;
+    border-radius: 25px;
+    box-shadow: 20px 20px 8px #C0C0C0 , -20px -20px 8px #FFFFFF;
+    }
+  
+  #InputSection {
     position: absolute;
-    background-color: #FFFFFF; 
-    list-style: none;
-    padding: 10px;
-    width: auto ; 
-}
-
-.nav-item:hover .dropdown {
-    display: block; /* Dropdown menu akan terlihat saat mengarahkan kursor ke menu utama */
-    width: auto; 
-}
-
-.dropdown li {
-    padding: 10px;
-    white-space: nowrap; 
-}
-
-.dropdown a {
-    color: black;
+    width: 80%;
+    margin-top: 3%;
+    margin-left: 10%;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #ResultSection {
+    width: 50%;
+    position: relative;
+    margin-left: 50%;
+    background-color: #5AA96B;
+    color: #FFFFFF;
+    border-radius: 100px 25px 25px 100px;
+    height: 100%;
+  }
+  
+  #FR {
+    width: 80%;
+    position: inherit;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 30px;
+  }
+  #FVA , #FVA2 , #Saran , #PSaran , #nSaran , #tSaran {
+    width: 90%;
+    position: inherit;
+    margin-left: 5%;
+    font-size: 18px;
+  }
+  
+  /* Animasi svg Compas Boy*/
+  #CompasBoy {
+    position: relative;
+    float: left; 
+    width: 45%;
+  }
+  @keyframes MelayangY {
+    0%{
+      transform: translateY(-10px);     
+    }
+    100%{
+      transform: translateY(10px);
+    }}
+  @keyframes Compas {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-90deg);
+    }}
+  @keyframes Chart {
+    0% {
+        transform: scaleY(0);
+        height: 0;
+    }
+    100% {
+      transform: scaleY(1);
+      height: 100%;
+    }}
+  
+  #compas-pointer{
+    animation: Compas 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  #chart-value {
+    animation: Chart 2s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+  }
+  #dollar-coin {
+    animation: MelayangY 2s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  #question-mark {
+    animation: MelayangY 1s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+  }
+  #boy-statis {
+    position: relative;
+  }
+  .submitLButton {
+    position: relative;
+    background: #5aa96b;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 50px;
     text-decoration: none;
-}
-
-.nav-item:hover a {
-    background-color: wheat; /* Warna latar belakang saat hover */
-}
-.submitLButton {
-  position: relative;
-  background: #5aa96b;
-  color: #FFFFFF;
-  border: none;
-  padding: 15px 50px;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  text-align: center;
-  margin-top: 2%;
-  left: 650px;
-}
-.submitButton {
-  position: relative;
-  background: #5aa96b;
-  color: #FFFFFF;
-  border: none;
-  padding: 15px 50px;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  text-align: center;
-  margin-top: 2%;
-  left: 200px;
-}
-
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 2%;
+  }
   .h1 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 50px;
-      width: 40%;
-      margin-left: 50%;
-      line-height: 65px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    width: 40%;
+    margin-left: 47%;
+    line-height: 65px;
   }
   .p1 {
-      width: 50%;
-      text-align: justify;
-      text-indent: 45px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 18px;
-      margin-left: 50%;
-      line-height: 25px;
+    width: 50%;
+    text-align: justify;
+    text-indent: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: 47%;
+    line-height: 25px;
   }
-    #nTextBox {
-        font-size: 12pt;
-        width: 250px; 
-        height: 30px; 
+  
+}
+@media (max-width: 450px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 1 em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 5em;
+    width: 100%;
+  }
+  
+  .nav-menu {
+      position: absolute;
+      list-style: none;
+      font-size: 90%;
+      font-weight: bold;
+      margin: 0 0em 0 0em;
+      display: grid;
+      grid-gap: 2em;
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .logo img {
+    width: 37%;
+    height: auto;
+    position: relative;
+    right: 0;
+    margin-top: 3em;
+  }
+  .nav-item {
+      position: relative; 
+      margin-right: 1em;
+      left: 9em;
+      padding: 0em;
+  }
+  
+  .nav-item a {
+      text-decoration: none;
+      color: black;
+  }
+  
+  /* Gaya dropdown */
+  .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #f7f7f7; 
+      list-style: none;
+      padding: 10px;
+      width: auto ;
+      right: 3em; 
+      margin-top: 2em;
+  }
+  
+  .nav-item:hover .dropdown {
+      display: block; /* Dropdown menu akan terlihat saat mengarahkan kursor ke menu utama */
+      width: auto; 
+  }
+  
+  .dropdown li {
+      padding: 10px;
+      white-space: nowrap; 
+  }
+  
+  .dropdown a {
+      color: black;
+      text-decoration: none;
+  }
+  
+  .nav-item:hover a {
+      background-color: wheat; /* Warna latar belakang saat hover */
+  }
+  
+  .submitButton {
+    position: relative;
+    background: #5aa96b;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 2%;
+  }
+  
+      #nTextBox {
+          font-size: 100%;
+          width: 90%; 
+          height: 40px; 
+      }
+  
+      #GTextBox , #PTextBox , #rTextBox , #tTextBox , #UTextBox , #OTextBox{
+          font-size: 100%;
+          width: 90%; 
+          height: 30px;
+      }
+  
+  .page1 {
+    width: 90%;
+    height: 800px;
+    background: #f7f7f7;
+    border-radius: 25px;
+    box-shadow: 20px 20px 8px #C0C0C0 , -20px -20px 8px #FFFFFF;
+    margin: 2em 1em;
     }
-
-    #GTextBox , #PTextBox , #rTextBox , #tTextBox , #UTextBox , #OTextBox{
-        font-size: 12pt;
-        width: 300px; 
-        height: 20px;
+  
+  #InputSection {
+    position: relative;
+    width: 80%;
+    margin-top: 3%;
+    margin-left: 10%;
+    font-size: 120%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #ResultSection {
+    width: 100%;
+    position: relative;
+    background-color: #5AA96B;
+    color: #FFFFFF;
+    border-radius: 100px 100px 25px 25px;
+    height: 85%;
+    margin-top: 2em;
+  }
+  
+  #FR {
+    width: 80%;
+    position: inherit;
+    margin-top: 5%;
+    margin-left: 10%;
+    font-size: 200%;
+  }
+  #FVA , #FVA2 , #Saran , #PSaran , #nSaran , #tSaran {
+    width: 90%;
+    position: inherit;
+    margin-left: 5%;
+    font-size: 130%;
+  }
+  
+  /* Animasi svg Compas Boy*/
+  #CompasBoy {
+    position: relative;
+    width: 130%;
+    margin: 0 0 0 -3em;
+  }
+  @keyframes MelayangY {
+    0%{
+      transform: translateY(-10px);     
     }
-
-.page1 {
-  margin-top: 5%;
-  margin-left: 100px;
-  width: 90%;
-  height: 500px;
-  background: #f7f7f7;
-  border-radius: 25px;
-  box-shadow: 20px 20px 8px #C0C0C0 , -20px -20px 8px #FFFFFF;
+    100%{
+      transform: translateY(10px);
+    }}
+  @keyframes Compas {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-90deg);
+    }}
+  @keyframes Chart {
+    0% {
+        transform: scaleY(0);
+        height: 0;
+    }
+    100% {
+      transform: scaleY(1);
+      height: 100%;
+    }}
+  
+  #compas-pointer{
+    animation: Compas 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
   }
-
-#InputSection {
-  position: absolute;
-  width: 80%;
-  margin-top: 3%;
-  margin-left: 10%;
-  font-size: 12pt;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#ResultSection {
-  width: 50%;
-  position: relative;
-  margin-left: 50%;
-  background-color: #5AA96B;
-  color: #FFFFFF;
-  border-radius: 100px 25px 25px 100px;
-  height: 100%;
-}
-
-#FR {
-  width: 80%;
-  position: inherit;
-  margin-top: 5%;
-  margin-left: 5%;
-  font-size: 30px;
-}
-#FVA , #FVA2 , #Saran , #PSaran , #nSaran , #tSaran {
-  width: 90%;
-  position: inherit;
-  margin-left: 5%;
-  font-size: 18px;
-}
-
-/* Animasi svg Compas Boy*/
-#CompasBoy {
-  position: absolute; 
-}
-@keyframes MelayangY {
-  0%{
-    transform: translateY(-10px);     
+  #chart-value {
+    animation: Chart 2s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
   }
-  100%{
-    transform: translateY(10px);
-  }}
-@keyframes Compas {
-  0% {
-    transform: rotate(0deg);
+  #dollar-coin {
+    animation: MelayangY 2s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
   }
-  100% {
-    transform: rotate(-90deg);
-  }}
-@keyframes Chart {
-  0% {
-      transform: scaleY(0);
-      height: 0;
+  #question-mark {
+    animation: MelayangY 1s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
   }
-  100% {
-    transform: scaleY(1);
-    height: 100%;
-  }}
+  #boy-statis {
+    position: relative;
+  }
+  .submitLButton {
+    position: relative;
+    background: #5aa96b;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    margin: 1em 5em;
+  }
+  .h1 {
+    position: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 200%;
+    margin: 0 1em;
+    line-height: 30px;
+  }
+  .p1 {
+    position: inherit;
+    width: 80%;
+    text-align: justify;
+    text-indent: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+    line-height: 25px;
+    margin: 1em 2em;
 
-#compas-pointer{
-  animation: Compas 1s ease-in-out infinite alternate;
-  transform-origin: center;
-  transform-box: fill-box;
+  }
+  
 }
-#chart-value {
-  animation: Chart 2s linear infinite alternate;
-  transform-origin: bottom;
-  transform-box: fill-box;
-}
-#dollar-coin {
-  animation: MelayangY 2s linear infinite alternate;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-#question-mark {
-  animation: MelayangY 1s linear infinite alternate;
-  transform-origin: bottom;
-  transform-box: fill-box;
-}
-#boy-statis {
-  position: relative;
-}
-
