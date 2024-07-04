@@ -44,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("silahkan isi seluruh tabel dalu Sobat!")
 
         } else {
+            var targetSection = document.getElementById('ResultSection');
+            targetSection.scrollIntoView({ behavior: 'smooth' });
             if (r === 0) {
                 FVA = P * t * n;
                 FVA = Math.ceil(FVA);
