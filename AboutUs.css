@@ -5,7 +5,7 @@ body{
 }
 
 @media (min-width: 451px) {
-    .navbar {
+        .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -21,6 +21,7 @@ body{
           list-style: none;
           display: flex;
           place-items: center;
+          font-size: 14pt;
       }
       
       .logo img {
@@ -71,6 +72,7 @@ body{
       .nav-item:hover a {
           background-color: wheat; /* Warna latar belakang saat hover */
       }
+
     .image {
         position: relative;
         width: 700px;
