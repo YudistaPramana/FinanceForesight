@@ -195,20 +195,20 @@ body{
       }
       .image {
         position: relative;
-        width: 180%;
+        width: 150%;
         margin: 0 -6em;
     }
       .h1 {
         position: relative;
         width: 40%;
-        font-size: 700%;
+        font-size: 400%;
         color: #FFFFFF;
         margin: 0em 5%;
         }
         .p1 /*deskripsi projek*/{
             width: 90%;
             position: relative;
-            font-size: 20pt;
+            font-size: 120%pt;
             color: #FFFFFF;
             text-align: justify;
             text-indent: 45px;
