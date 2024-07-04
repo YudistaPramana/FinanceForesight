@@ -418,7 +418,7 @@ body{
     .p1 {
       position: inherit;
       width: 30%;
-      margin: -8.5em 0em 0em 10.5em;
+      margin: -10em 0em 0em 13em;
     }
   }
 
@@ -431,7 +431,7 @@ body{
     .p2 {
       position: inherit;
       width: 30%;
-      margin: -8em 0em 0em 10.5em;
+      margin: -8em 0em 0em 12em;
 
     }
   }
